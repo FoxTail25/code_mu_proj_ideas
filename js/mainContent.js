@@ -13,7 +13,6 @@ const enertaiment_box = document.getElementById('entertaiment_box')
 document.getElementById('resetEntertaimentFilterBtn').addEventListener('click', resetEntertaimentFilter);
 
 let entertainmentArr = [...entertainment]; //массив со всеми развлечениями
-let filteredArr = []; // массив с отфильтрованными развлечениями
 
 let filterArr = []; // массив для хранения уникальных описаний
 
