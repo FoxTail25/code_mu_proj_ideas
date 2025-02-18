@@ -20,7 +20,7 @@ let filterArr = []; // массив для хранения уникальных
 //функция заполнения массива ключевыми словами для фильтрации развлечений 
 entertainment.forEach(elem => {
 	if (!filterArr.includes(elem.descriptionWord)) {
-		filterArr.push(elem.descriptionWord)
+		filterArr.push(elem.descriptionWord);
 	}
 });
 
@@ -29,33 +29,24 @@ filterArr.forEach(e => filterBox.appendChild(createBtnInBtnBox(e, filterdEnterta
 
 //функция фильтрации развлечений
 function filterdEntertaiment(name) {
-	// filteredArr = entertainmentArr.filter(e => e.descriptionWord == name);
-	// console.log('filterArr', filteredArr)
 	[...enertaiment_box.children].forEach(e => {
-		// console.log(e.dataset)
 		if (e.dataset.name != name) {
-			e.style.display = "none"
+			e.classList.add('hide');
 		} else {
-			e.style.display = "block"
+			e.classList.remove('hide');
 		}
-	})
+	});
 }
 
 //функция сброса фильтра развлечений
 function resetEntertaimentFilter() {
-	// filteredArr = [...entertainmentArr];
-	// console.log('filterArr', filteredArr)
-	[...enertaiment_box.children].forEach(e =>
-	{
-		// console.log(e.dataset)
+	[...enertaiment_box.children].forEach(e => {
 		if (e.dataset.name) {
-			e.style.display = "block"
+			e.classList.remove('hide');
 		} else {
-			e.style.display = "none"
+			e.classList.add('hide');
 		}
-	}
-
-	)
+	});
 }
 
 entertainmentArr.forEach(e => enertaiment_box.appendChild(createEntertaimenBox(e)))
