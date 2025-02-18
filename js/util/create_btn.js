@@ -1,4 +1,5 @@
 
+// доступ к образцу кнопки
 const btnBox = document.querySelector('.btn_box');
 
 

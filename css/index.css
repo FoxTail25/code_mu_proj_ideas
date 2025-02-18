@@ -20,3 +20,7 @@ main {
     max-width: var(--container_max-width);
     margin: 0 auto;
 }
+
+.sample {
+	display: none;
+}
