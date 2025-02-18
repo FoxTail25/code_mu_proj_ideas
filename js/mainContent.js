@@ -1,12 +1,14 @@
-import { createEntertaimenBox } from './enertaiment_box.js';
-import { entertainment } from './entertainment.js'
-import { createBtnInBtnBox } from './util/create_btn.js';
+// Основной файл скрипта
+
+import { createEntertaimenBox } from './enertaiment_box.js'; // подгружаем функцию создания карточек развлечений
+import { entertainment } from './entertainment.js' // подгружаем массив с объектами развлечений
+import { createBtnInBtnBox } from './util/create_btn.js'; // подгружаем функцию создания кнопок фильтрации
 
 // доступ к блоку для вставки кнопок фильтрации развлечений
 const filterBox = document.getElementById('filter_box');
 
 // доступ к блоку с карточками развлечений
-const enertaiment_box = document.getElementById('entertaiment_box')
+const enertaiment_box = document.getElementById('entertaiment_box');
 
 
 // вешаем слушатель на кнопку сброса фильтрации развлечений
@@ -48,5 +50,6 @@ function resetEntertaimentFilter() {
 	});
 }
 
-entertainmentArr.forEach(e => enertaiment_box.appendChild(createEntertaimenBox(e)))
+// функция создания карточек развлечений.
+entertainmentArr.forEach(e => enertaiment_box.appendChild(createEntertaimenBox(e)));
 

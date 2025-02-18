@@ -1,3 +1,5 @@
+// файл в котором хранится массив с объектами развлечений
+
 export const entertainment = [
 	{
 		name:'PANORAMA360',
